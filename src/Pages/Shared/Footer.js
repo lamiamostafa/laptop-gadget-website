@@ -5,16 +5,18 @@ const Footer = () => {
     return (
         <footer style={{
             background: `url(${footer})`,
+            backgroundColor: 'black',
+            color: 'white',
             backgroundSize: 'cover'
-        }} className="p-10 ">
+        }} className="p-10 w-full">
             <div className="footer">
-                <div>
+                < div >
                     <span className="footer-title">Services</span>
                     <a className="link link-hover">Branding</a>
                     <a className="link link-hover">Design</a>
                     <a className="link link-hover">Marketing</a>
                     <a className="link link-hover">Advertisement</a>
-                </div>
+                </div >
                 <div>
                     <span className="footer-title">Company</span>
                     <a className="link link-hover">About us</a>
@@ -28,11 +30,11 @@ const Footer = () => {
                     <a className="link link-hover">Privacy policy</a>
                     <a className="link link-hover">Cookie policy</a>
                 </div>
-            </div>
+            </div >
             <div className="my-10 text-center">
                 <p>Copyright © 2022 - All right reserved </p>
             </div>
-        </footer>
+        </footer >
     );
 };
 
