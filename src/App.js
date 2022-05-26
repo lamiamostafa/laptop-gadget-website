@@ -4,10 +4,9 @@ import Navbar from './Pages/Shared/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
 // import About from './Pages/About/About';
-// import Login from './Pages/Login/Login';
+import Login from './Pages/Login/Login';
 // import Appointment from './Pages/Appointment/Appointment';
-// import SignUp from './Pages/Login/SignUp';
-// import RequireAuth from './Pages/Login/RequireAuth';
+import SignUp from './Pages/Login/SignUp';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AllProducts from './Pages/Home/AllProducts';
@@ -28,12 +27,13 @@ function App() {
             <Appointment></Appointment>
           </RequireAuth>
         }></Route> */}
-        {/* <Route path="/login" element={<Login></Login>}></Route>
-        <Route path="/signup" element={<SignUp></SignUp>}></Route> */}
-        <Route path='/product/:productId' element={
+        <Route path="/login" element={<Login></Login>}></Route>
+        <Route path="/signup" element={<SignUp></SignUp>}></Route>
+        <Route path='/purchase/:purchaseId' element={
           <RequireAuth>
             <Purchase></Purchase>
           </RequireAuth>}></Route>
+        <Route path="*" element={<NotFound></NotFound>}></Route>
 
 
       </Routes>
