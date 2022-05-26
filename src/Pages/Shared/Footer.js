@@ -6,9 +6,10 @@ const Footer = () => {
         <footer style={{
             background: `url(${footer})`,
             backgroundColor: 'black',
+            objectFit: 'cover',
             color: 'white',
-            backgroundSize: 'cover'
-        }} className="p-10 w-full">
+            backgroundSize: 'contain'
+        }} className="p-10 w-screen font-bold">
             <div className="footer">
                 < div >
                     <span className="footer-title">Services</span>

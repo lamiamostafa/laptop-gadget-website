@@ -27,7 +27,7 @@ const BusinessSummary = () => {
         <section className="my-20">
             <div className="text-center my-5">
                 <h4 className="text-3xl text-[#06396C] font-bold uppercase">Millions Business trust us</h4>
-                <h2 className="text-2xl">We are here for understanding users expectations</h2>
+                <h2 className="text-2xl my-2">We are here for understanding users expectations</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {
