@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "winson herry",
+        "ratings": "5 star",
+        "description": "The products of this company are so satisfying",
+        "img": "https://i.ibb.co/Hh5q5pc/people.png"
+    },
+    {
+        "id": 2,
+        "name": "Jinson herry",
+        "ratings": "4 star",
+        "description": "I am a regular customer of this comapany.They never dissapoints.",
+        "img": "https://i.ibb.co/Hh5q5pc/people.png"
+    },
+    {
+        "id": 3,
+        "name": "Minson herry",
+        "ratings": "5 star",
+        "description": "The products of this company are so satisfying",
+        "img": "https://i.ibb.co/Hh5q5pc/people.png"
+    },
+    {
+        "id": 4,
+        "name": "Kinson herry",
+        "ratings": "3 star",
+        "description": "The products of this company are so satisfying",
+        "img": "https://i.ibb.co/Hh5q5pc/people.png"
+    }
+]
