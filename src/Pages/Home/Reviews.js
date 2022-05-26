@@ -16,7 +16,7 @@ const Reviews = () => {
         <section className="my-20">
             <div className="flex justify-between">
                 <div>
-                    <h4 className="text-3xl text-[#06396C] font-bold">Reviews</h4>
+                    <h4 className="text-3xl text-[#06396C] uppercase font-bold">Reviews</h4>
                     <h2 className="text-3xl">What Our Clients say</h2>
                 </div>
                 <div>
