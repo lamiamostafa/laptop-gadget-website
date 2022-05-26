@@ -12,6 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AllProducts from './Pages/Home/AllProducts';
 import Purchase from './Pages/Home/Purchase';
 import RequireAuth from './Pages/Login/RequireAuth';
+import NotFound from './Pages/Shared/NotFound';
 
 
 function App() {
