@@ -1,17 +1,18 @@
 import React from 'react';
 
-const Tool = ({ tool }) => {
+const Product = ({ product }) => {
     return (
         <div className="card lg:max-w-lg bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
-                <img src={tool.img} alt="Shoes" className="rounded-xl" />
+                <img src={product.img} alt="products" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
-                <h2 className="card-title">{tool.name}</h2>
-                <p className="card-title">{tool.description}</p>
-                <p className="card-title">{tool.minimumOrderQuantity}</p>
-                <p className="card-title">{tool.availableOrderQuantity}</p>
-                <p className="card-title">{tool.price}</p>
+                <h2 className="card-title">{product.name}</h2>
+                <p className="card-title"><small>{product.description}</small></p>
+                <p className="card-desc">Price:{product.price}</p>
+                <p className="card-desc">MinimumQuantity:{product.minimumOrderQuantity}</p>
+                <p className="card-desc">AvailableQuantity:{product.availableOrderQuantity}</p>
+
                 {/* <button onClick={() => navigateToProductDetail(_id)} className='btn btn-primary updateButton button'> Stock Update</button> */}
                 <button className='btn btn-primary uppercase text-white font-bold bg-[#06396C] '> Buy Now</button>
             </div>
@@ -19,4 +20,4 @@ const Tool = ({ tool }) => {
     );
 };
 
-export default Tool;
+export default Product;
