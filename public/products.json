@@ -1,155 +1,137 @@
 [
     {
         "id": 1,
-        "name": "BANANA",
-        "price": "500",
-        "description": "Organic Banana.It is fresh and smooth",
+        "name": "Dell Series Battery",
+        "price": "900",
+        "description": "11.1V4400mAh laptop computer battery for dell series battery",
         "minimumOrderQuantity": "20",
         "availableOrderQuantity": "200",
-        "img": "https://i.ibb.co/mqjD2sG/product-8.png"
+        "img": "https://i.ibb.co/H2K88YF/battery1.jpg"
     },
     {
         "id": 2,
-        "name": "TOMATO",
-        "price": "100",
-        "description": "Fresh Tomatoes are healthy for health",
-        "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/kXYnWtz"
+        "name": "Dell Series Keyboard",
+        "price": "3000",
+        "description": " laptop computer keyboard for dell series ",
+        "minimumOrderQuantity": "10",
+        "availableOrderQuantity": "500",
+        "img": "https://i.ibb.co/0C2mV0s/keyboard1.jpg"
     },
     {
         "id": 3,
-        "name": "ORANGE",
-        "price": "200",
-        "description": "Fresh Oranges are imported from pakistan",
-        "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/R90gKDR"
+        "name": "Dell series charger",
+        "price": "1000",
+        "description": "laptop computer charger for dell series",
+        "minimumOrderQuantity": "30",
+        "availableOrderQuantity": "900",
+        "img": "https://i.ibb.co/X26sJnz/charger1.jpg"
     },
     {
         "id": 4,
-        "name": "MILK",
-        "price": "600",
-        "description": "Fresh Milk is from Our firm",
-        "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/WsHVHM2"
+        "name": "Dell Series Mouse",
+        "price": "800",
+        "description": "laptop computer Mouse for dell series",
+        "minimumOrderQuantity": "5",
+        "availableOrderQuantity": "600",
+        "img": "https://i.ibb.co/MG5NXVT/mouse1.jpg"
     },
     {
         "id": 5,
-        "name": "GRAPES",
-        "price": "100",
-        "description": "Fresh Grapes are good for Health",
-        "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/cJV5TxH"
+        "name": "Asus Series Battery",
+        "price": "1000",
+        "description": "laptop computer battery for asus series",
+        "minimumOrderQuantity": "10",
+        "availableOrderQuantity": "1500",
+        "img": "https://i.ibb.co/Zxysk0v/battery2.jpg"
     },
     {
         "id": 6,
-        "name": "NUTS",
-        "price": "150",
-        "description": "Fresh Nuts are imported from China",
-        "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/h7rW8GK"
+        "name": "Lenevo Series Battery",
+        "price": "800",
+        "description": "laptop computer battery for lenevo series",
+        "minimumOrderQuantity": "15",
+        "availableOrderQuantity": "2000",
+        "img": "https://i.ibb.co/hyWgNm3/battery3.jpg"
     },
     {
         "id": 7,
-        "name": "APPLE",
-        "price": "130",
-        "description": "Fresh Apples are good for Health",
-        "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/3MxNXX7"
+        "name": "HP Series Battery",
+        "price": "1000",
+        "description": "laptop computer battery for hp series",
+        "minimumOrderQuantity": "10",
+        "availableOrderQuantity": "1000",
+        "img": "https://i.ibb.co/jH8J8Qr/battery4.jpg"
     },
     {
         "id": 8,
-        "name": "BUTTER",
-        "price": "500",
-        "description": "Fresh Butters are imported from London",
-        "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/QKdnSLm"
+        "name": "Mac Series Battery",
+        "price": "5000",
+        "description": "laptop computer battery for mac series",
+        "minimumOrderQuantity": "4",
+        "availableOrderQuantity": "4000",
+        "img": "https://i.ibb.co/fMLR0Q5/battery5.jpg"
     },
     {
         "id": 9,
-        "name": "CARROT",
-        "price": "40",
-        "description": "Fresh Nuts are contained of vitamins",
-        "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/n77bB3J"
-    },
-    {
-        "id": 9,
-        "name": "CARROT",
-        "price": "40",
-        "description": "Fresh Nuts are contained of vitamins",
-        "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/n77bB3J"
-    },
-    {
-        "id": 9,
-        "name": "CARROT",
-        "price": "40",
-        "description": "Fresh Nuts are contained of vitamins",
-        "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/n77bB3J"
+        "name": "Asus Series Charger",
+        "price": "1200",
+        "description": "laptop computer charger for asus series",
+        "minimumOrderQuantity": "10",
+        "availableOrderQuantity": "150",
+        "img": "https://i.ibb.co/pRHzDDx/charger2.jpg"
     },
     {
         "id": 10,
-        "name": "CARROT",
+        "name": "Mac Series Charger",
         "price": "40",
-        "description": "Fresh Nuts are contained of vitamins",
+        "description": "laptop computer charger for mac series",
         "minimumOrderQuantity": "20",
         "availableOrderQuantity": "200",
-        "img": "https://ibb.co/qNj7FHJ"
+        "img": "https://i.ibb.co/vjYmypz/charger3.jpg"
     },
     {
         "id": 11,
-        "name": "CARROT",
-        "price": "40",
-        "description": "Fresh Nuts are contained of vitamins",
-        "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/0mgr7by"
+        "name": "Leneveo series charger",
+        "price": "1200",
+        "description": "laptop computer charger for lenevo series",
+        "minimumOrderQuantity": "13",
+        "availableOrderQuantity": "300",
+        "img": "https://i.ibb.co/dPPrtbY/charger4.jpg"
     },
     {
         "id": 12,
-        "name": "CARROT",
-        "price": "40",
-        "description": "Fresh Nuts are contained of vitamins",
-        "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/WfXr3gK"
+        "name": "Leneveo series keyboard",
+        "price": "3000",
+        "description": "laptop computer keyboard for lenevo series",
+        "minimumOrderQuantity": "40",
+        "availableOrderQuantity": "5000",
+        "img": "https://i.ibb.co/BcXBpM2/keyboard2.jpg"
     },
     {
         "id": 13,
-        "name": "CARROT",
-        "price": "40",
-        "description": "Fresh Nuts are contained of vitamins",
-        "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/mXFzxqs"
+        "name": "Leneveo series mouse",
+        "price": "200",
+        "description": "laptop computer mouse for lenevo series",
+        "minimumOrderQuantity": "10",
+        "availableOrderQuantity": "2000",
+        "img": "https://i.ibb.co/sgMxRyd/mouse2.jpg"
     },
     {
         "id": 14,
-        "name": "CARROT",
-        "price": "40",
-        "description": "Fresh Nuts are contained of vitamins",
+        "name": "Asus Series Keyboard",
+        "price": "4500",
+        "description": "laptop computer keyboard for asus series",
         "minimumOrderQuantity": "20",
-        "availableOrderQuantity": "200",
-        "img": "https://ibb.co/51fp4Bg"
+        "availableOrderQuantity": "500",
+        "img": "https://i.ibb.co/Pgy2YwC/keyboard3.jpg"
     },
     {
         "id": 15,
-        "name": "CARROT",
-        "price": "40",
-        "description": "Fresh Nuts are contained of vitamins",
+        "name": "Asus Series Mouse",
+        "price": "500",
+        "description": "laptop computer mouse for asus series",
         "minimumOrderQuantity": "20",
         "availableOrderQuantity": "200",
-        "img": "https://ibb.co/h82Pr6z"
+        "img": "https://i.ibb.co/GPCKG6S/mouse3.jpg"
     }
 ]
