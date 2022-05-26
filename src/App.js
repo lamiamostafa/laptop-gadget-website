@@ -13,6 +13,7 @@ import AllProducts from './Pages/Home/AllProducts';
 import Purchase from './Pages/Home/Purchase';
 import RequireAuth from './Pages/Login/RequireAuth';
 import NotFound from './Pages/Shared/NotFound';
+import Dashboard from './Pages/Dashboard/Dashboard';
 
 
 function App() {
@@ -33,6 +34,10 @@ function App() {
         <Route path='/purchase/:purchaseId' element={
           <RequireAuth>
             <Purchase></Purchase>
+          </RequireAuth>}></Route>
+        <Route path='/dashboard' element={
+          <RequireAuth>
+            <Dashboard></Dashboard>
           </RequireAuth>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
 
