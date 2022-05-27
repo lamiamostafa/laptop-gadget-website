@@ -2,10 +2,9 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Product = ({ product }) => {
-
     const navigate = useNavigate();
     const navigateToPurchase = id => {
-        navigate(`/purchase/${id}`);
+        navigate(`/product/${id}`);
     }
     return (
         <div className="card lg:max-w-lg bg-base-100 shadow-xl">
@@ -13,6 +12,7 @@ const Product = ({ product }) => {
                 <img src={product.img} alt="products" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
+                <h2 className="card-title">{product._id}</h2>
                 <h2 className="card-title">{product.name}</h2>
                 <p className="card-title"><small>{product.description}</small></p>
                 <p className="card-desc">Price:{product.price}</p>
