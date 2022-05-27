@@ -7,7 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import useToken from '../../hooks/useToken';
 
 const SignUp = () => {
-    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [
         createUserWithEmailAndPassword,
@@ -18,23 +18,23 @@ const SignUp = () => {
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-    const [token] = useToken(user || gUser);
+    const [token] = useToken(user || googleUser);
 
     const navigate = useNavigate();
 
     let signInError;
 
-    if (loading || gLoading || updating) {
+    if (loading || googleLoading || updating) {
         return <Loading></Loading>
     }
 
-    if (error || gError || updateError) {
-        signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
+    if (error || googleError || updateError) {
+        signInError = <p className='text-red-500'><small>{error?.message || googleError?.message || updateError?.message}</small></p>
     }
 
-    // if (token) {
-    //     navigate('');
-    // }
+    if (token) {
+        navigate('/');
+    }
 
     const onSubmit = async data => {
         await createUserWithEmailAndPassword(data.email, data.password);
