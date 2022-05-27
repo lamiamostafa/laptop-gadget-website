@@ -10,29 +10,29 @@ import usePurchaseDetail from '../../hooks/usePurchaseDetail';
 const Purchase = () => {
     const { productId } = useParams();
     const [item, setItem] = usePurchaseDetail(productId);
-    const { register, formState: { errors }, handleSubmit, getValues } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
     const [user] = useAuthState(auth);
     console.log(user);
-    const min = item.minimumOrderQuantity;
-    const max = item.availableOrderQuantity;
+    // const [quantity, setQuantity] = useState("");
+    const [isDisabled, setDisabled] = useState(false);
+
+    let quantity;
 
     const onSubmit = data => {
+
         // console.log(data);
-
-
-    }
-    const handleQuantity = () => {
-        const quantity = getValues("orderQuantity");
+        quantity = data.orderQuantity;
         console.log(quantity);
 
 
+
     }
+
 
     return (
 
         <div className="flex justify-center items-center h-screen">
             <div className="card w-96 bg-base-100 shadow-xl">
-                <h1>Name{user.displayName}</h1>
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">Purchase the order</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
@@ -77,7 +77,9 @@ const Purchase = () => {
                             <label className="label">
                                 <span className="label-text">Order quantity</span>
                             </label>
-                            <input onChange={handleQuantity} className="input input-bordered w-full max-w-xs "
+
+
+                            <input className="input input-bordered w-full max-w-xs "
                                 name="quantity" type="number" placeholder="Order Quantity"
                                 {...register("orderQuantity", {
                                     required: {
@@ -86,23 +88,22 @@ const Purchase = () => {
                                     },
 
 
-
                                 })}
 
 
                             />
 
-                            {/* <label className="label">
+                            <label className="label">
                                 {errors.orderQuantity?.type === 'required' && <span className="label-text-alt text-red-500">{errors.orderQuantity.message}</span>}
-                                {errors.orderQuantity?.type === 'maxlength' && <span className="label-text-alt text-red-500">{errors.orderQuantity.message}</span>}
-                                {errors.orderQuantity?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.orderQuantity.message}</span>}
-                            </label> */}
+
+                            </label>
 
                         </div>
 
 
                         <button
-                            // disabled={errors.orderQuantity?.type === 'maxLength' || errors.orderQuantity?.type === 'minLength'}
+                            // disabled={isDisabled}
+                            disabled={errors.orderQuantity?.type === 'maxLength' || errors.orderQuantity?.type === 'minLength'}
                             className="btn w-full  my-2 text-white" type="submit"  >Purchase Now</button>
                     </form>
 
