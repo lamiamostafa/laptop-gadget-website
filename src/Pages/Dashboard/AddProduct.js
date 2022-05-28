@@ -44,7 +44,7 @@ const AddProduct = () => {
                     <input
                         type="text"
                         placeholder="Product Name"
-                        className="input input-bordered w-full max-w-xs mx-auto my-2 text-center"
+                        className="input input-bordered w-full max-w-xs mx-auto my-2 "
                         {...register("name")}
                     />
 

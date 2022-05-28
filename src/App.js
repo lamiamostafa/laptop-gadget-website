@@ -24,6 +24,7 @@ import Portfolio from './Pages/Home/Portfolio';
 
 
 
+
 function App() {
   return (
     <div className="max-w-7xl mx-auto px-12">
@@ -44,7 +45,7 @@ function App() {
           <RequireAuth>
             <Dashboard></Dashboard>
           </RequireAuth>}>
-          <Route index element={<MyOrder></MyOrder>}></Route>
+
           <Route path="review" element={<AddReview></AddReview>}></Route>
           <Route path="profile" element={<MyProfile></MyProfile>}></Route>
           <Route path="users" element={<RequireAdmin><Users></Users></RequireAdmin>}></Route>

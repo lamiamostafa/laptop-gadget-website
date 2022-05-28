@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router-dom';
@@ -10,23 +10,36 @@ import usePurchaseDetail from '../../hooks/usePurchaseDetail';
 const Purchase = () => {
     const { productId } = useParams();
     const [item, setItem] = usePurchaseDetail(productId);
-    const { register, formState: { errors }, handleSubmit, reset } = useForm();
+    const { register, formState: { errors }, handleSubmit } = useForm();
     const [user] = useAuthState(auth);
     console.log(user);
-    // const [quantity, setQuantity] = useState("");
-    const [isDisabled, setDisabled] = useState(false);
 
-    let quantity;
+    // const [disable, setDisable] = useState(true);
+
+
 
     const onSubmit = data => {
+        const url = `http://localhost:5000/order`;
+        fetch(url, {
 
-        // console.log(data);
-        quantity = data.orderQuantity;
-        console.log(quantity);
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+
+                console.log(result);
+                toast('Thanks your order is Added');
+            })
+
 
 
 
     }
+
 
 
     return (
@@ -66,13 +79,6 @@ const Purchase = () => {
                             <input className="mb-2" placeholder='Address' {...register("address")} />
 
                         </div>
-                        {/* <div className="form-control w-full max-w-xs">
-                            <label className="label">
-                                <span className="label-text">Available Order</span>
-                            </label>
-                            <input className="input input-bordered w-full max-w-xs " value={item.availableOrderQuantity} {...register("availableOrderQuantity")} />
-
-                        </div>  */}
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
                                 <span className="label-text">Order quantity</span>
@@ -80,13 +86,12 @@ const Purchase = () => {
 
 
                             <input className="input input-bordered w-full max-w-xs "
-                                name="quantity" type="number" placeholder="Order Quantity"
+                                max={item.availableOrderQuantity} min={item.minimumOrderQuantity} name="quantity" type="number" placeholder="Order Quantity"
                                 {...register("orderQuantity", {
                                     required: {
                                         value: true,
                                         message: 'order is Required'
                                     },
-
 
                                 })}
 
@@ -99,11 +104,20 @@ const Purchase = () => {
                             </label>
 
                         </div>
+                        <div className="form-control w-full max-w-xs">
+                            <label className="label">
+                                <span className="label-text">Total Price</span>
+                            </label>
+                            <input className="input input-bordered w-full max-w-xs  "  {...register("total price")} />
+
+                        </div>
+
 
 
                         <button
-                            // disabled={isDisabled}
-                            disabled={errors.orderQuantity?.type === 'maxLength' || errors.orderQuantity?.type === 'minLength'}
+                            // onClick={handleData}
+
+                            // disabled={disable ? true : false}
                             className="btn w-full  my-2 text-white" type="submit"  >Purchase Now</button>
                     </form>
 
@@ -116,6 +130,7 @@ const Purchase = () => {
 
 
     );
+
 };
 
 export default Purchase;
