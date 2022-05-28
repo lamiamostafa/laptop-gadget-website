@@ -93,6 +93,16 @@ const Purchase = () => {
                                         value: true,
                                         message: 'order is Required'
                                     },
+                                    // min: {
+                                    //     value: item.minimumOrderQuantity,
+                                    //     message: 'min order is Required'
+                                    // },
+                                    // max: {
+                                    //     value: item.availablerderQuantity,
+                                    //     message: ' max order is Required'
+                                    // }
+
+
 
                                 })}
 
@@ -101,6 +111,8 @@ const Purchase = () => {
 
                             <label className="label">
                                 {errors.orderQuantity?.type === 'required' && <span className="label-text-alt text-red-500">{errors.orderQuantity.message}</span>}
+                                {/* {errors.orderQuantity?.type === 'min' && <span className="label-text-alt text-red-500">{errors.orderQuantity.message}</span>}
+                                {errors.orderQuantity?.type === 'max' && <span className="label-text-alt text-red-500">{errors.orderQuantity.message}</span>} */}
 
                             </label>
 
@@ -118,7 +130,7 @@ const Purchase = () => {
                         <button
                             // onClick={handleData}
 
-                            // disabled={disable ? true : false}
+                            // disabled={errors.orderQuantity?.type === 'min' || errors.orderQuantity?.type === 'max'}
                             className="btn w-full  my-2 text-white" type="submit"  >Purchase Now</button>
                     </form>
 
