@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useForm } from "react-hook-form";
+import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 const AddReview = () => {
+
     const colors = {
         orange: '#FFBA5A',
         grey: '#a9a9a9'
@@ -15,23 +20,31 @@ const AddReview = () => {
         stars: {
             display: "flex",
             flexDirection: "row",
-        },
-        textarea: {
-            border: "1px solid #a9a9a9",
-            borderRadius: 5,
-            padding: 10,
-            margin: "20px 0",
-            minHeight: 100,
-            width: 300
-        },
-        button: {
-            border: "1px solid #a9a9a9",
-            borderRadius: 5,
-            width: 300,
-            padding: 10,
         }
 
 
+    };
+
+    const { register, handleSubmit } = useForm();
+    const [user] = useAuthState(auth);
+    const onSubmit = data => {
+        console.log(data);
+
+        const url = `http://localhost:5000/review`;
+        fetch(url, {
+
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+
+                console.log(result);
+                toast('Thanks for Your FeedBack');
+            })
     };
 
     const [currentValue, setCurrentValue] = useState(0);
@@ -55,6 +68,8 @@ const AddReview = () => {
             <div style={styles.stars}>
                 {stars.map((_, index) => {
                     return (
+
+
                         <FaStar
                             key={index}
                             size={24}
@@ -70,16 +85,40 @@ const AddReview = () => {
                     )
                 })}
             </div>
-            <textarea
-                placeholder="What's your experience?"
-                style={styles.textarea}
-            />
+            <div className="flex ">
+                <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card-body ">
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <input className="input my-2 input-bordered w-full max-w-xs" type="text"
+                                placeholder="The Rating is" {...register("ratings")} />
+                            <input className="input input-bordered my-2 w-full max-w-xs"
+                                placeholder="What's your experience?"
+                                type="text"
+                                value={user.displayName}
+                                {...register("name")}
+                            />
+                            <input className="input input-bordered my-2 w-full max-w-xs"
+                                placeholder="Your Image"
+                                type="text"
+                                {...register("img")}
+                            />
 
-            <button
-                style={styles.button}
-            >
-                Submit
-            </button>
+                            <input className="input input-bordered my-2 w-full max-w-xs"
+                                placeholder="What's your experience?"
+                                type="text"
+                                {...register("description")}
+                            />
+
+                            <button
+                                className="btn w-full  my-2 text-white"
+                                type="submit"
+                            >
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
         </div>
 
