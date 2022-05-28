@@ -4,14 +4,14 @@ import { useQuery } from 'react-query';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import DeleteOrderConfirm from './DeleteOrderConfirm';
-import MyOrderRow from './MyOrderRow';
+import ManageAllOrderRow from './ManageAllOrderRow';
 
 
-const MyOrder = () => {
+const ManageAllOrder = () => {
     const [user] = useAuthState(auth);
     const email = user.email;
     const [deletingOrder, setDeletingOrder] = useState(null);
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:5000/myorder?email=${email}`, {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:5000/order?email=${email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -38,13 +38,13 @@ const MyOrder = () => {
                     </thead>
                     <tbody>
                         {
-                            orders.map((order, index) => <MyOrderRow
+                            orders.map((order, index) => <ManageAllOrderRow
                                 key={order._key}
                                 order={order}
                                 index={index}
                                 refetch={refetch}
                                 setDeletingOrder={setDeletingOrder}
-                            ></MyOrderRow>)
+                            ></ManageAllOrderRow>)
                         }
                     </tbody>
                 </table>
@@ -58,4 +58,4 @@ const MyOrder = () => {
     );
 };
 
-export default MyOrder;
+export default ManageAllOrder;
