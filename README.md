@@ -2,7 +2,7 @@
 
 # manufacturer-website
 This is an Laptop Gadget Portal website where user can get all the necessary items of laptop .User has to login first for getting the detail information.
-## [Laptop Gadget WebSite Live Link](https://warehouse-management-web-a8f05.web.app/)
+## [Laptop Gadget WebSite Live Link](https://manufacturer-website-c89a2.web.app)
 
 ## Project Includes
 
