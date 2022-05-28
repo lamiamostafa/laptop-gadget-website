@@ -34,6 +34,7 @@ const Purchase = () => {
                 console.log(result);
                 toast('Thanks your order is Added');
             })
+        console.log(data);
 
 
 
@@ -69,7 +70,7 @@ const Purchase = () => {
                             <label className="label">
                                 <span className="label-text">ProductName</span>
                             </label>
-                            <input className="input input-bordered w-full max-w-xs " value={item.name} {...register("minimumOrderQuantity")} />
+                            <input className="input input-bordered w-full max-w-xs " placerholder="productname" value={item?.name} {...register("productname")} />
 
                         </div>
                         <div className="form-control w-full max-w-xs">
@@ -108,7 +109,7 @@ const Purchase = () => {
                             <label className="label">
                                 <span className="label-text">Total Price</span>
                             </label>
-                            <input className="input input-bordered w-full max-w-xs  "  {...register("total price")} />
+                            <input className="input input-bordered w-full max-w-xs  "  {...register("totalprice")} />
 
                         </div>
 

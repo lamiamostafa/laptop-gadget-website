@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { useQuery } from 'react-query';
-import useProducts from '../../hooks/useProducts';
-import Product from '../Home/Product';
 import Loading from '../Shared/Loading';
 import DeleteConfirmationModal from './DeleteConfirmationModal';
 import ManageProductRow from './ManageProductRow';
