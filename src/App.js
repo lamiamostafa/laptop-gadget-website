@@ -3,9 +3,7 @@ import './App.css';
 import Navbar from './Pages/Shared/Navbar';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
-// import About from './Pages/About/About';
 import Login from './Pages/Login/Login';
-// import Appointment from './Pages/Appointment/Appointment';
 import SignUp from './Pages/Login/SignUp';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -21,6 +19,7 @@ import Users from './Pages/Dashboard/Users';
 import RequireAdmin from './Pages/Login/RequireAdmin';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
+import Blogs from './Pages/Home/Blogs/Blogs';
 
 
 function App() {
@@ -29,13 +28,9 @@ function App() {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
-        {/* <Route path="/about" element={<About></About>}></Route> */}
+        <Route path="/blog" element={<Blogs></Blogs>}></Route>
         <Route path="/allproducts" element={<AllProducts></AllProducts>}></Route>
-        {/* <Route path="/appointment" element={
-          <RequireAuth>
-            <Appointment></Appointment>
-          </RequireAuth>
-        }></Route> */}
+
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/signup" element={<SignUp></SignUp>}></Route>
         <Route path='/product/:productId' element={
