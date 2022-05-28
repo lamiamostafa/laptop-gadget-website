@@ -18,8 +18,8 @@ const ManageProduct = () => {
 
         <div>
             <h2 className="text-2xl my-2">Total Product: {products.length}</h2>
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div class="overflow-x-auto table-responsive">
+                <table class="table w-full ">
                     <thead>
                         <tr>
                             <th></th>

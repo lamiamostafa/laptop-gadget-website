@@ -23,7 +23,7 @@ const ManageAllOrder = () => {
     return (
         <div>
             <h2 className="text-2xl my-2">Total Order: {orders.length}</h2>
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto table-responsive">
                 <table class="table w-full">
                     <thead>
                         <tr>
