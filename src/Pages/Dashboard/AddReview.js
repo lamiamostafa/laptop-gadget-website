@@ -30,7 +30,7 @@ const AddReview = () => {
     const onSubmit = data => {
         console.log(data);
 
-        const url = `http://localhost:5000/review`;
+        const url = `https://safe-wildwood-22478.herokuapp.com/review`;
         fetch(url, {
 
             method: 'POST',

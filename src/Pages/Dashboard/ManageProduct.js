@@ -7,7 +7,7 @@ import ManageProductRow from './ManageProductRow';
 const ManageProduct = () => {
     const [deletingProduct, setDeletingProduct] = useState(null);
 
-    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:5000/product')
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('https://safe-wildwood-22478.herokuapp.com/product')
         .then(res => res.json()));
 
     if (isLoading) {

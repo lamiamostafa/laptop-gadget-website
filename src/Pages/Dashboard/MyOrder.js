@@ -11,7 +11,7 @@ const MyOrder = () => {
     const [user] = useAuthState(auth);
     const email = user.email;
     const [deletingOrder, setDeletingOrder] = useState(null);
-    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`http://localhost:5000/myorder?email=${email}`, {
+    const { data: orders, isLoading, refetch } = useQuery('orders', () => fetch(`https://safe-wildwood-22478.herokuapp.com/myorder?email=${email}`, {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`

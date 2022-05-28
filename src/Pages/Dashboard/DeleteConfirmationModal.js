@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeleteConfirmationModal = ({ deletingProduct, refetch, setDeletingProduct }) => {
     const { name, _id } = deletingProduct;
     const handleDelete = id => {
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://safe-wildwood-22478.herokuapp.com/product/${id}`;
         fetch(url, {
             method: "DELETE"
         })

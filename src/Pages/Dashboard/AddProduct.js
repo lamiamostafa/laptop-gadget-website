@@ -10,7 +10,7 @@ const AddProduct = () => {
     const onSubmit = data => {
         console.log(data);
 
-        const url = `http://localhost:5000/addproduct`;
+        const url = `https://safe-wildwood-22478.herokuapp.com/addproduct`;
         fetch(url, {
 
             method: 'POST',

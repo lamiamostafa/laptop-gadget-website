@@ -10,7 +10,7 @@ const MyProfile = () => {
     const onSubmit = data => {
         console.log(data);
 
-        const url = `http://localhost:5000/myprofile`;
+        const url = `https://safe-wildwood-22478.herokuapp.com/myprofile`;
         fetch(url, {
 
             method: 'POST',

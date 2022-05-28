@@ -19,7 +19,7 @@ const Purchase = () => {
 
 
     const onSubmit = data => {
-        const url = `http://localhost:5000/order`;
+        const url = `https://safe-wildwood-22478.herokuapp.com/order`;
         fetch(url, {
 
             method: 'POST',
